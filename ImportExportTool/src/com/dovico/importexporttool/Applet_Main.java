@@ -1,6 +1,9 @@
 package com.dovico.importexporttool;
 
 import javax.swing.JApplet;
+import javax.swing.JFrame;
+
+import java.awt.Component;
 import java.awt.event.*;
 import netscape.javascript.*; // Needed for JavaScript communication (found in plugin.jar of 'C:\Program Files (x86)\Java\jre6\lib\')
 
@@ -65,4 +68,13 @@ public class Applet_Main extends JApplet {
 		}
 		catch(Throwable e){}
 	}
+	
+	  public static void main(String[] args) {
+		    Component applet = new Applet_Main();
+		    JFrame frame = new JFrame("My applet, as application");
+		    frame.getContentPane().add(applet);
+		    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    frame.pack();
+		    frame.show();	
+	  }
 }
